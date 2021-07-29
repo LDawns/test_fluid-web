@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>示例 - Fuse客户端全局部署 | Fluid</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/test_fluid-web/fluid-stacked-color.svg">
+    <meta name="description" content="Fluid, 在云上为大数据以及AI应用的弹性数据提供抽象和加速服务。">
+    
+    <link rel="preload" href="/test_fluid-web/assets/css/0.styles.7dd94690.css" as="style"><link rel="preload" href="/test_fluid-web/assets/js/app.388e2c4c.js" as="script"><link rel="preload" href="/test_fluid-web/assets/js/2.5766231d.js" as="script"><link rel="preload" href="/test_fluid-web/assets/js/83.b7dc0551.js" as="script"><link rel="prefetch" href="/test_fluid-web/assets/js/10.a47f132f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/11.1b4f7b93.js"><link rel="prefetch" href="/test_fluid-web/assets/js/12.c4b61c02.js"><link rel="prefetch" href="/test_fluid-web/assets/js/13.e06d011d.js"><link rel="prefetch" href="/test_fluid-web/assets/js/14.6cc73322.js"><link rel="prefetch" href="/test_fluid-web/assets/js/15.a90eda0d.js"><link rel="prefetch" href="/test_fluid-web/assets/js/16.66ba02df.js"><link rel="prefetch" href="/test_fluid-web/assets/js/17.48dd3685.js"><link rel="prefetch" href="/test_fluid-web/assets/js/18.63421545.js"><link rel="prefetch" href="/test_fluid-web/assets/js/19.d9e59557.js"><link rel="prefetch" href="/test_fluid-web/assets/js/20.f4593b97.js"><link rel="prefetch" href="/test_fluid-web/assets/js/21.92b11002.js"><link rel="prefetch" href="/test_fluid-web/assets/js/22.f9c9101f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/23.8399d520.js"><link rel="prefetch" href="/test_fluid-web/assets/js/24.59a70a2a.js"><link rel="prefetch" href="/test_fluid-web/assets/js/25.bf1beed1.js"><link rel="prefetch" href="/test_fluid-web/assets/js/26.a16f0755.js"><link rel="prefetch" href="/test_fluid-web/assets/js/27.15ccff10.js"><link rel="prefetch" href="/test_fluid-web/assets/js/28.9889b39f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/29.1215e799.js"><link rel="prefetch" href="/test_fluid-web/assets/js/3.56d689c1.js"><link rel="prefetch" href="/test_fluid-web/assets/js/30.2bb34711.js"><link rel="prefetch" href="/test_fluid-web/assets/js/31.de305f87.js"><link rel="prefetch" href="/test_fluid-web/assets/js/32.419f8133.js"><link rel="prefetch" href="/test_fluid-web/assets/js/33.c43f24fc.js"><link rel="prefetch" href="/test_fluid-web/assets/js/34.90bf1b16.js"><link rel="prefetch" href="/test_fluid-web/assets/js/35.0f51ee57.js"><link rel="prefetch" href="/test_fluid-web/assets/js/36.96508203.js"><link rel="prefetch" href="/test_fluid-web/assets/js/37.ae6696ba.js"><link rel="prefetch" href="/test_fluid-web/assets/js/38.28aa4b9f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/39.f1ca8a61.js"><link rel="prefetch" href="/test_fluid-web/assets/js/4.d02a3f46.js"><link rel="prefetch" href="/test_fluid-web/assets/js/40.2011ae55.js"><link rel="prefetch" href="/test_fluid-web/assets/js/41.9fe8f146.js"><link rel="prefetch" href="/test_fluid-web/assets/js/42.8c89f576.js"><link rel="prefetch" href="/test_fluid-web/assets/js/43.e36c35e3.js"><link rel="prefetch" href="/test_fluid-web/assets/js/44.a4a526e3.js"><link rel="prefetch" href="/test_fluid-web/assets/js/45.32c04bd0.js"><link rel="prefetch" href="/test_fluid-web/assets/js/46.5db1961b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/47.592ddd13.js"><link rel="prefetch" href="/test_fluid-web/assets/js/48.b9de6e43.js"><link rel="prefetch" href="/test_fluid-web/assets/js/49.f563b5fc.js"><link rel="prefetch" href="/test_fluid-web/assets/js/5.f46eaad6.js"><link rel="prefetch" href="/test_fluid-web/assets/js/50.5e0b8751.js"><link rel="prefetch" href="/test_fluid-web/assets/js/51.e3af9de5.js"><link rel="prefetch" href="/test_fluid-web/assets/js/52.df87ffac.js"><link rel="prefetch" href="/test_fluid-web/assets/js/53.f0ad16f5.js"><link rel="prefetch" href="/test_fluid-web/assets/js/54.64193864.js"><link rel="prefetch" href="/test_fluid-web/assets/js/55.0f7edaff.js"><link rel="prefetch" href="/test_fluid-web/assets/js/56.fa85df5a.js"><link rel="prefetch" href="/test_fluid-web/assets/js/57.e559add7.js"><link rel="prefetch" href="/test_fluid-web/assets/js/58.c2deb6eb.js"><link rel="prefetch" href="/test_fluid-web/assets/js/59.92e500c2.js"><link rel="prefetch" href="/test_fluid-web/assets/js/6.c1eeb950.js"><link rel="prefetch" href="/test_fluid-web/assets/js/60.da86a163.js"><link rel="prefetch" href="/test_fluid-web/assets/js/61.cc0e1096.js"><link rel="prefetch" href="/test_fluid-web/assets/js/62.bc797710.js"><link rel="prefetch" href="/test_fluid-web/assets/js/63.4be107bc.js"><link rel="prefetch" href="/test_fluid-web/assets/js/64.03592719.js"><link rel="prefetch" href="/test_fluid-web/assets/js/65.147730bd.js"><link rel="prefetch" href="/test_fluid-web/assets/js/66.86034275.js"><link rel="prefetch" href="/test_fluid-web/assets/js/67.5deeff6f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/68.c2a5158b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/69.aa46e80c.js"><link rel="prefetch" href="/test_fluid-web/assets/js/7.26529ff9.js"><link rel="prefetch" href="/test_fluid-web/assets/js/70.627b3f91.js"><link rel="prefetch" href="/test_fluid-web/assets/js/71.decc0dba.js"><link rel="prefetch" href="/test_fluid-web/assets/js/72.4e973f11.js"><link rel="prefetch" href="/test_fluid-web/assets/js/73.d8016a18.js"><link rel="prefetch" href="/test_fluid-web/assets/js/74.35635e47.js"><link rel="prefetch" href="/test_fluid-web/assets/js/75.4afdac49.js"><link rel="prefetch" href="/test_fluid-web/assets/js/76.281abbaa.js"><link rel="prefetch" href="/test_fluid-web/assets/js/77.9e26ce90.js"><link rel="prefetch" href="/test_fluid-web/assets/js/78.1df84513.js"><link rel="prefetch" href="/test_fluid-web/assets/js/79.2fd13a47.js"><link rel="prefetch" href="/test_fluid-web/assets/js/8.f1d5ca74.js"><link rel="prefetch" href="/test_fluid-web/assets/js/80.b85b01c0.js"><link rel="prefetch" href="/test_fluid-web/assets/js/81.33165f64.js"><link rel="prefetch" href="/test_fluid-web/assets/js/82.604dce1f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/84.56815f63.js"><link rel="prefetch" href="/test_fluid-web/assets/js/85.5bd120e4.js"><link rel="prefetch" href="/test_fluid-web/assets/js/86.afed304a.js"><link rel="prefetch" href="/test_fluid-web/assets/js/87.b761b891.js"><link rel="prefetch" href="/test_fluid-web/assets/js/88.53aab7ed.js"><link rel="prefetch" href="/test_fluid-web/assets/js/89.bfdc775b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/9.10583e0b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/90.f8a54968.js"><link rel="prefetch" href="/test_fluid-web/assets/js/91.77fe31dd.js">
+    <link rel="stylesheet" href="/test_fluid-web/assets/css/0.styles.7dd94690.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/test_fluid-web/zh/" class="home-link router-link-active"><img src="/test_fluid-web/fluid-horizontal-color.png" alt="Fluid" class="logo"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/guide/" class="nav-link">
+  指南
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/dev/" class="nav-link">
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/" class="nav-link router-link-active">
+  示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="社区" class="dropdown-title"><span class="title">社区</span> <span class="arrow down"></span></button> <button type="button" aria-label="社区" class="mobile-dropdown-title"><span class="title">社区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/community.html" class="nav-link">
+  社区
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/ADOPTERS.html" class="nav-link">
+  合作伙伴
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/technology/" class="nav-link">
+  技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/releases/" class="nav-link">
+  版本发布
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/casestudy/" class="nav-link">
+  案例学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/fuse_affinity.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/fluid-cloudnative/fluid" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/guide/" class="nav-link">
+  指南
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/dev/" class="nav-link">
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/" class="nav-link router-link-active">
+  示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="社区" class="dropdown-title"><span class="title">社区</span> <span class="arrow down"></span></button> <button type="button" aria-label="社区" class="mobile-dropdown-title"><span class="title">社区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/community.html" class="nav-link">
+  社区
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/ADOPTERS.html" class="nav-link">
+  合作伙伴
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/technology/" class="nav-link">
+  技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/releases/" class="nav-link">
+  版本发布
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/casestudy/" class="nav-link">
+  案例学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/fuse_affinity.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/fluid-cloudnative/fluid" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/test_fluid-web/zh/samples/" aria-current="page" class="sidebar-link">示例 - 远程Web文件访问加速</a></li><li><a href="/test_fluid-web/zh/samples/accelerate_pvc.html" class="sidebar-link">示例 - 使用Fluid加速PVC</a></li><li><a href="/test_fluid-web/zh/samples/machinelearning.html" class="sidebar-link">示例 - 用Fluid加速机器学习训练</a></li><li><a href="/test_fluid-web/zh/samples/data_warmup.html" class="sidebar-link">示例 - 数据预加载</a></li><li><a href="/test_fluid-web/zh/samples/accelerate_hdfs.html" class="sidebar-link">示例 - HDFS Client文件访问加速</a></li><li><a href="/test_fluid-web/zh/samples/api_proxy.html" class="sidebar-link">示例 - 基于Restful的文件系统客户端</a></li><li><a href="/test_fluid-web/zh/samples/backup_and_restore_metadata.html" class="sidebar-link">示例-Dataset数据的的备份与恢复</a></li><li><a href="/test_fluid-web/zh/samples/data_co_locality.html" class="sidebar-link">示例 - 数据缓存亲和性调度</a></li><li><a href="/test_fluid-web/zh/samples/data_toleration.html" class="sidebar-link">示例 - 数据容忍污点调度</a></li><li><a href="/test_fluid-web/zh/samples/dataset_scaling.html" class="sidebar-link">示例 - Dataset手动扩缩容</a></li><li><a href="/test_fluid-web/zh/samples/fuse_affinity.html" aria-current="page" class="active sidebar-link">示例 - Fuse客户端全局部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/samples/fuse_affinity.html#前提条件" class="sidebar-link">前提条件</a></li><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/samples/fuse_affinity.html#新建工作环境" class="sidebar-link">新建工作环境</a></li><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/samples/fuse_affinity.html#运行示例1-设置global为true" class="sidebar-link">运行示例1: 设置global为true</a></li><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/samples/fuse_affinity.html#运行示例2-设置global为true-并且设置fuse的nodeselector" class="sidebar-link">运行示例2: 设置global为true, 并且设置fuse的nodeSelector</a></li><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/samples/fuse_affinity.html#环境清理" class="sidebar-link">环境清理</a></li></ul></li><li><a href="/test_fluid-web/zh/samples/hdfs_configuration.html" class="sidebar-link">示例 - Fluid访问HDFS所需的特殊配置</a></li><li><a href="/test_fluid-web/zh/samples/hostpath.html" class="sidebar-link">示例 - 使用Fluid加速主机目录</a></li><li><a href="/test_fluid-web/zh/samples/master_high_avaliability.html" class="sidebar-link">示例 - 配置 master 高可用模式</a></li><li><a href="/test_fluid-web/zh/samples/multi_dataset_same_node_accessing.html" class="sidebar-link">示例 - 单机多Dataset远程Web文件访问加速</a></li><li><a href="/test_fluid-web/zh/samples/nonroot_access.html" class="sidebar-link">示例 - 使用Fluid访问非root用户的数据</a></li><li><a href="/test_fluid-web/zh/samples/tieredstore_config.html" class="sidebar-link">示例 - Alluxio分层存储配置</a></li><li><a href="/test_fluid-web/zh/samples/use_encryptoptions.html" class="sidebar-link">示例 - 使用Secret配置Dataset敏感信息</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="示例-fuse客户端全局部署"><a href="#示例-fuse客户端全局部署" class="header-anchor">#</a> 示例 - Fuse客户端全局部署</h1> <p>在Fluid中，<code>Dataset</code>资源对象中所定义的远程文件是可被调度的，这意味着你能够像管理你的Pod一样管理远程文件缓存在Kubernetes集群上的存放位置。 而执行计算的Pod可以通过Fuse客户端访问数据文件。</p> <p>Fuse客户端提供两种模式：</p> <ol><li><p>global为false，该模式为Fuse客户端和缓存数据强制亲和性，此时Fuse客户端的数量等于Runtime的replicas数量。此配置默认模式，无需显式声明，好处是可以发挥数据的亲和性优点，但是Fuse客户端的部署就变得比较固定。</p></li> <li><p>global为true， 该模式为Fuse客户端可以在Kubernetes集群中全局部署，并不要求数据和Fuse客户端之间的强制亲和性，此时Fuse客户端的数量可能远远超Runtime的replicas数量。 建议此时可以通过nodeSelector来指定Fuse客户端的部署范围。</p></li></ol> <p>本文档将向你简单地展示上述特性</p> <h2 id="前提条件"><a href="#前提条件" class="header-anchor">#</a> 前提条件</h2> <p>在运行该示例之前，请参考<a href="/test_fluid-web/zh/userguide/install.html">安装文档</a>完成安装，并检查Fluid各组件正常运行：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl get pod -n fluid-system
+alluxioruntime-controller-5b64fdbbb-84pc6   <span class="token number">1</span>/1     Running   <span class="token number">0</span>          8h
+csi-nodeplugin-fluid-fwgjh                  <span class="token number">2</span>/2     Running   <span class="token number">0</span>          8h
+csi-nodeplugin-fluid-ll8bq                  <span class="token number">2</span>/2     Running   <span class="token number">0</span>          8h
+dataset-controller-5b7848dbbb-n44dj         <span class="token number">1</span>/1     Running   <span class="token number">0</span>          8h
+</code></pre></div><p>通常来说，你会看到一个名为<code>dataset-controller</code>的Pod、一个名为<code>alluxioruntime-controller</code>的Pod和多个名为<code>csi-nodeplugin</code>的Pod正在运行。其中，<code>csi-nodeplugin</code>这些Pod的数量取决于你的Kubernetes集群中结点的数量。</p> <h2 id="新建工作环境"><a href="#新建工作环境" class="header-anchor">#</a> 新建工作环境</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>$ <span class="token function">mkdir</span> <span class="token operator">&lt;</span>any-path<span class="token operator">&gt;</span>/fuse-global-deployment
+$ <span class="token builtin class-name">cd</span> <span class="token operator">&lt;</span>any-path<span class="token operator">&gt;</span>/fuse-global-deployment
+</code></pre></div><h2 id="运行示例1-设置global为true"><a href="#运行示例1-设置global为true" class="header-anchor">#</a> 运行示例1: 设置global为true</h2> <p><strong>查看全部结点</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl get nodes
+NAME                       STATUS   ROLES    AGE     VERSION
+cn-beijing.192.168.1.146   Ready    <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>   7d14h   v1.16.9-aliyun.1
+cn-beijing.192.168.1.147   Ready    <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>   7d14h   v1.16.9-aliyun.1
+</code></pre></div><p><strong>使用标签标识结点</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl label nodes cn-beijing.192.168.1.146 cache-node<span class="token operator">=</span>true
+</code></pre></div><p>在接下来的步骤中，我们将使用<code>NodeSelector</code>来管理集群中存放数据的位置，所以在这里标记期望的结点</p> <p><strong>再次查看结点</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl get node -L cache-node
+NAME                       STATUS   ROLES    AGE     VERSION            cache-node
+cn-beijing.192.168.1.146   Ready    <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>   7d14h   v1.16.9-aliyun.1   <span class="token boolean">true</span>
+cn-beijing.192.168.1.147   Ready    <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>   7d14h   v1.16.9-aliyun.1   
+</code></pre></div><p>目前，在全部2个结点中，仅有一个结点添加了<code>cache-node=true</code>的标签，接下来，我们希望数据缓存仅会被放置在该结点之上</p> <p><strong>检查待创建的Dataset资源对象</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ cat<span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">&gt;</span>dataset.yaml</span>
+apiVersion: data.fluid.io/v1alpha1
+kind: Dataset
+metadata:
+  name: hbase
+spec:
+  mounts:
+    - mountPoint: https://mirrors.tuna.tsinghua.edu.cn/apache/hbase/stable/
+      name: hbase
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: cache-node
+              operator: In
+              values:
+                - &quot;true&quot;
+EOF</span>
+</code></pre></div><p>在该<code>Dataset</code>资源对象的<code>spec</code>属性中，我们定义了一个<code>nodeSelectorTerm</code>的子属性，该子属性要求数据缓存必须被放置在具有<code>cache-node=true</code>标签的结点之上</p> <p><strong>创建Dataset资源对象</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl create -f dataset.yaml
+dataset.data.fluid.io/hbase created
+</code></pre></div><p><strong>检查待创建的AlluxioRuntime资源对象</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ cat<span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">&gt;</span>runtime.yaml</span>
+apiVersion: data.fluid.io/v1alpha1
+kind: AlluxioRuntime
+metadata:
+  name: hbase
+spec:
+  replicas: 1
+  tieredstore:
+    levels:
+      - mediumtype: MEM
+        path: /dev/shm
+        quota: 2Gi
+        high: &quot;0.95&quot;
+        low: &quot;0.7&quot;
+  fuse:
+    global: true
+EOF</span>
+</code></pre></div><p>该配置文件片段中，包含了许多与Alluxio相关的配置信息，这些信息将被Fluid用来启动一个Alluxio实例。上述配置片段中的<code>spec.replicas</code>属性被设置为1,这表明Fluid将会启动一个包含1个Alluxio Master和1个Alluxio Worker的Alluxio实例。 另外一个值得注意的是Fuse包含<code>global: true</code>,<br>
+这样意味着Fuse可以全局部署，而不依赖于数据缓存的位置。</p> <p><strong>创建AlluxioRuntime资源并查看状态</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl create -f runtime.yaml
+alluxioruntime.data.fluid.io/hbase created
+
+$ kubectl get po -owide
+NAME                 READY   STATUS    RESTARTS   AGE     IP              NODE                       NOMINATED NODE   READINESS GATES
+hbase-fuse-gfq7z     <span class="token number">1</span>/1     Running   <span class="token number">0</span>          3m47s   <span class="token number">192.168</span>.1.147   cn-beijing.192.168.1.147   <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>           <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>
+hbase-fuse-lmk5p     <span class="token number">1</span>/1     Running   <span class="token number">0</span>          3m47s   <span class="token number">192.168</span>.1.146   cn-beijing.192.168.1.146   <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>           <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>
+hbase-master-0       <span class="token number">2</span>/2     Running   <span class="token number">0</span>          3m47s   <span class="token number">192.168</span>.1.147   cn-beijing.192.168.1.147   <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>           <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>
+hbase-worker-hvbp2   <span class="token number">2</span>/2     Running   <span class="token number">0</span>          3m1s    <span class="token number">192.168</span>.1.146   cn-beijing.192.168.1.146   <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>           <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>
+</code></pre></div><p>在此处可以看到，有一个Alluxio Worker成功启动，并且运行在具有指定标签（即<code>cache-node=true</code>）的结点之上。Alluixo Fuse的数量为2，运行在所有的子节点上。</p> <p><strong>检查AlluxioRuntime状态</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl get alluxioruntime hbase -o wide
+NAME    READY MASTERS   DESIRED MASTERS   MASTER PHASE   READY WORKERS   DESIRED WORKERS   WORKER PHASE   READY FUSES   DESIRED FUSES   FUSE PHASE   AGE
+hbase   <span class="token number">1</span>               <span class="token number">1</span>                 Ready          <span class="token number">1</span>               <span class="token number">1</span>                 Ready          <span class="token number">2</span>             <span class="token number">2</span>               Ready        12m
+</code></pre></div><p>这里可以看到Alluxio Worker的数量为1，而Alluxio Fuse的数量为2。</p> <p><strong>删除AlluxioRuntime</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>kubectl delete alluxioruntime hbase
+</code></pre></div><h2 id="运行示例2-设置global为true-并且设置fuse的nodeselector"><a href="#运行示例2-设置global为true-并且设置fuse的nodeselector" class="header-anchor">#</a> 运行示例2: 设置global为true, 并且设置fuse的nodeSelector</h2> <p>下面，我们希望通过配置node selector配置Fuse客户端，将其指定到集群中某个节点上。在本例子中，既然我们已经选择节点cn-beijing.192.168.1.146作为缓存节点，为了形成对比，这里选择节点cn-beijing.192.168.1.147运行Alluxio Fuse。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ cat<span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">&gt;</span>runtime-node-selector.yaml</span>
+apiVersion: data.fluid.io/v1alpha1
+kind: AlluxioRuntime
+metadata:
+  name: hbase
+spec:
+  replicas: 1
+  tieredstore:
+    levels:
+      - mediumtype: MEM
+        path: /dev/shm
+        quota: 2Gi
+        high: &quot;0.95&quot;
+        low: &quot;0.7&quot;
+  fuse:
+    global: true
+    nodeSelector:
+      kubernetes.io/hostname: cn-beijing.192.168.1.147
+EOF</span>
+</code></pre></div><p>该配置文件片段中，和之前runtime.yaml相比，在Fuse包含<code>global: true</code>的前提下,  还增加了nodeSelector并且指向了节点cn-beijing.192.168.1.147。</p> <p><strong>创建AlluxioRuntime资源并查看状态</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl create -f runtime-node-selector.yaml
+alluxioruntime.data.fluid.io/hbase created
+
+$ kubectl get po -owide
+NAME                 READY   STATUS    RESTARTS   AGE   IP              NODE                       NOMINATED NODE   READINESS GATES
+hbase-fuse-xzbww     <span class="token number">1</span>/1     Running   <span class="token number">0</span>          1h   <span class="token number">192.168</span>.1.147   cn-beijing.192.168.1.147   <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>           <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>
+hbase-master-0       <span class="token number">2</span>/2     Running   <span class="token number">0</span>          1h   <span class="token number">192.168</span>.1.147   cn-beijing.192.168.1.147   <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>           <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>
+hbase-worker-vdxd5   <span class="token number">2</span>/2     Running   <span class="token number">0</span>          1h   <span class="token number">192.168</span>.1.146   cn-beijing.192.168.1.146   <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>           <span class="token operator">&lt;</span>none<span class="token operator">&gt;</span>
+</code></pre></div><p>在此处可以看到，有一个Alluxio Worker成功启动，并且运行在具有指定标签（即<code>cache-node=true</code>）的结点之上。Alluixo Fuse的数量为1，运行在节点cn-beijing.192.168.1.147上。</p> <p><strong>检查AlluxioRuntime状态</strong></p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl get alluxioruntimes.data.fluid.io -owide
+NAME    READY MASTERS   DESIRED MASTERS   MASTER PHASE   READY WORKERS   DESIRED WORKERS   WORKER PHASE   READY FUSES   DESIRED FUSES   FUSE PHASE   AGE
+hbase   <span class="token number">1</span>               <span class="token number">1</span>                 Ready          <span class="token number">1</span>               <span class="token number">1</span>                 Ready          <span class="token number">1</span>             <span class="token number">1</span>               Ready        1h
+</code></pre></div><p>这里可以看到Alluxio Worker的数量为1，而Alluxio Fuse的数量也为1，这是因为AlluxioRuntime指定了nodeSelector，并且满足条件的节点只有一个。</p> <p>可见，Fluid支持Fuse客户端的单独的调度策略，这些调度策略为用户提供了更加灵活的Fuse客户端调度策略</p> <h2 id="环境清理"><a href="#环境清理" class="header-anchor">#</a> 环境清理</h2> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl delete -f <span class="token builtin class-name">.</span>
+
+$ kubectl label node cn-beijing.192.168.1.146 cache-node-
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/test_fluid-web/zh/samples/dataset_scaling.html" class="prev">
+        示例 - Dataset手动扩缩容
+      </a></span> <span class="next"><a href="/test_fluid-web/zh/samples/hdfs_configuration.html">
+        示例 - Fluid访问HDFS所需的特殊配置
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/test_fluid-web/assets/js/app.388e2c4c.js" defer></script><script src="/test_fluid-web/assets/js/2.5766231d.js" defer></script><script src="/test_fluid-web/assets/js/83.b7dc0551.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Fluid 快速上手 | Fluid</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/test_fluid-web/fluid-stacked-color.svg">
+    <meta name="description" content="Fluid, 在云上为大数据以及AI应用的弹性数据提供抽象和加速服务。">
+    
+    <link rel="preload" href="/test_fluid-web/assets/css/0.styles.7dd94690.css" as="style"><link rel="preload" href="/test_fluid-web/assets/js/app.388e2c4c.js" as="script"><link rel="preload" href="/test_fluid-web/assets/js/2.5766231d.js" as="script"><link rel="preload" href="/test_fluid-web/assets/js/66.86034275.js" as="script"><link rel="prefetch" href="/test_fluid-web/assets/js/10.a47f132f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/11.1b4f7b93.js"><link rel="prefetch" href="/test_fluid-web/assets/js/12.c4b61c02.js"><link rel="prefetch" href="/test_fluid-web/assets/js/13.e06d011d.js"><link rel="prefetch" href="/test_fluid-web/assets/js/14.6cc73322.js"><link rel="prefetch" href="/test_fluid-web/assets/js/15.a90eda0d.js"><link rel="prefetch" href="/test_fluid-web/assets/js/16.66ba02df.js"><link rel="prefetch" href="/test_fluid-web/assets/js/17.48dd3685.js"><link rel="prefetch" href="/test_fluid-web/assets/js/18.63421545.js"><link rel="prefetch" href="/test_fluid-web/assets/js/19.d9e59557.js"><link rel="prefetch" href="/test_fluid-web/assets/js/20.f4593b97.js"><link rel="prefetch" href="/test_fluid-web/assets/js/21.92b11002.js"><link rel="prefetch" href="/test_fluid-web/assets/js/22.f9c9101f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/23.8399d520.js"><link rel="prefetch" href="/test_fluid-web/assets/js/24.59a70a2a.js"><link rel="prefetch" href="/test_fluid-web/assets/js/25.bf1beed1.js"><link rel="prefetch" href="/test_fluid-web/assets/js/26.a16f0755.js"><link rel="prefetch" href="/test_fluid-web/assets/js/27.15ccff10.js"><link rel="prefetch" href="/test_fluid-web/assets/js/28.9889b39f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/29.1215e799.js"><link rel="prefetch" href="/test_fluid-web/assets/js/3.56d689c1.js"><link rel="prefetch" href="/test_fluid-web/assets/js/30.2bb34711.js"><link rel="prefetch" href="/test_fluid-web/assets/js/31.de305f87.js"><link rel="prefetch" href="/test_fluid-web/assets/js/32.419f8133.js"><link rel="prefetch" href="/test_fluid-web/assets/js/33.c43f24fc.js"><link rel="prefetch" href="/test_fluid-web/assets/js/34.90bf1b16.js"><link rel="prefetch" href="/test_fluid-web/assets/js/35.0f51ee57.js"><link rel="prefetch" href="/test_fluid-web/assets/js/36.96508203.js"><link rel="prefetch" href="/test_fluid-web/assets/js/37.ae6696ba.js"><link rel="prefetch" href="/test_fluid-web/assets/js/38.28aa4b9f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/39.f1ca8a61.js"><link rel="prefetch" href="/test_fluid-web/assets/js/4.d02a3f46.js"><link rel="prefetch" href="/test_fluid-web/assets/js/40.2011ae55.js"><link rel="prefetch" href="/test_fluid-web/assets/js/41.9fe8f146.js"><link rel="prefetch" href="/test_fluid-web/assets/js/42.8c89f576.js"><link rel="prefetch" href="/test_fluid-web/assets/js/43.e36c35e3.js"><link rel="prefetch" href="/test_fluid-web/assets/js/44.a4a526e3.js"><link rel="prefetch" href="/test_fluid-web/assets/js/45.32c04bd0.js"><link rel="prefetch" href="/test_fluid-web/assets/js/46.5db1961b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/47.592ddd13.js"><link rel="prefetch" href="/test_fluid-web/assets/js/48.b9de6e43.js"><link rel="prefetch" href="/test_fluid-web/assets/js/49.f563b5fc.js"><link rel="prefetch" href="/test_fluid-web/assets/js/5.f46eaad6.js"><link rel="prefetch" href="/test_fluid-web/assets/js/50.5e0b8751.js"><link rel="prefetch" href="/test_fluid-web/assets/js/51.e3af9de5.js"><link rel="prefetch" href="/test_fluid-web/assets/js/52.df87ffac.js"><link rel="prefetch" href="/test_fluid-web/assets/js/53.f0ad16f5.js"><link rel="prefetch" href="/test_fluid-web/assets/js/54.64193864.js"><link rel="prefetch" href="/test_fluid-web/assets/js/55.0f7edaff.js"><link rel="prefetch" href="/test_fluid-web/assets/js/56.fa85df5a.js"><link rel="prefetch" href="/test_fluid-web/assets/js/57.e559add7.js"><link rel="prefetch" href="/test_fluid-web/assets/js/58.c2deb6eb.js"><link rel="prefetch" href="/test_fluid-web/assets/js/59.92e500c2.js"><link rel="prefetch" href="/test_fluid-web/assets/js/6.c1eeb950.js"><link rel="prefetch" href="/test_fluid-web/assets/js/60.da86a163.js"><link rel="prefetch" href="/test_fluid-web/assets/js/61.cc0e1096.js"><link rel="prefetch" href="/test_fluid-web/assets/js/62.bc797710.js"><link rel="prefetch" href="/test_fluid-web/assets/js/63.4be107bc.js"><link rel="prefetch" href="/test_fluid-web/assets/js/64.03592719.js"><link rel="prefetch" href="/test_fluid-web/assets/js/65.147730bd.js"><link rel="prefetch" href="/test_fluid-web/assets/js/67.5deeff6f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/68.c2a5158b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/69.aa46e80c.js"><link rel="prefetch" href="/test_fluid-web/assets/js/7.26529ff9.js"><link rel="prefetch" href="/test_fluid-web/assets/js/70.627b3f91.js"><link rel="prefetch" href="/test_fluid-web/assets/js/71.decc0dba.js"><link rel="prefetch" href="/test_fluid-web/assets/js/72.4e973f11.js"><link rel="prefetch" href="/test_fluid-web/assets/js/73.d8016a18.js"><link rel="prefetch" href="/test_fluid-web/assets/js/74.35635e47.js"><link rel="prefetch" href="/test_fluid-web/assets/js/75.4afdac49.js"><link rel="prefetch" href="/test_fluid-web/assets/js/76.281abbaa.js"><link rel="prefetch" href="/test_fluid-web/assets/js/77.9e26ce90.js"><link rel="prefetch" href="/test_fluid-web/assets/js/78.1df84513.js"><link rel="prefetch" href="/test_fluid-web/assets/js/79.2fd13a47.js"><link rel="prefetch" href="/test_fluid-web/assets/js/8.f1d5ca74.js"><link rel="prefetch" href="/test_fluid-web/assets/js/80.b85b01c0.js"><link rel="prefetch" href="/test_fluid-web/assets/js/81.33165f64.js"><link rel="prefetch" href="/test_fluid-web/assets/js/82.604dce1f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/83.b7dc0551.js"><link rel="prefetch" href="/test_fluid-web/assets/js/84.56815f63.js"><link rel="prefetch" href="/test_fluid-web/assets/js/85.5bd120e4.js"><link rel="prefetch" href="/test_fluid-web/assets/js/86.afed304a.js"><link rel="prefetch" href="/test_fluid-web/assets/js/87.b761b891.js"><link rel="prefetch" href="/test_fluid-web/assets/js/88.53aab7ed.js"><link rel="prefetch" href="/test_fluid-web/assets/js/89.bfdc775b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/9.10583e0b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/90.f8a54968.js"><link rel="prefetch" href="/test_fluid-web/assets/js/91.77fe31dd.js">
+    <link rel="stylesheet" href="/test_fluid-web/assets/css/0.styles.7dd94690.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/test_fluid-web/zh/" class="home-link router-link-active"><img src="/test_fluid-web/fluid-horizontal-color.png" alt="Fluid" class="logo"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/guide/" class="nav-link router-link-active">
+  指南
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/dev/" class="nav-link">
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/" class="nav-link">
+  示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="社区" class="dropdown-title"><span class="title">社区</span> <span class="arrow down"></span></button> <button type="button" aria-label="社区" class="mobile-dropdown-title"><span class="title">社区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/community.html" class="nav-link">
+  社区
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/ADOPTERS.html" class="nav-link">
+  合作伙伴
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/technology/" class="nav-link">
+  技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/releases/" class="nav-link">
+  版本发布
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/casestudy/" class="nav-link">
+  案例学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/guide/get_started.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/guide/get_started.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/fluid-cloudnative/fluid" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/guide/" class="nav-link router-link-active">
+  指南
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/dev/" class="nav-link">
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/" class="nav-link">
+  示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="社区" class="dropdown-title"><span class="title">社区</span> <span class="arrow down"></span></button> <button type="button" aria-label="社区" class="mobile-dropdown-title"><span class="title">社区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/community.html" class="nav-link">
+  社区
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/ADOPTERS.html" class="nav-link">
+  合作伙伴
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/technology/" class="nav-link">
+  技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/releases/" class="nav-link">
+  版本发布
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/casestudy/" class="nav-link">
+  案例学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/guide/get_started.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/guide/get_started.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/fluid-cloudnative/fluid" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/test_fluid-web/zh/guide/" aria-current="page" class="sidebar-link">Fluid概览</a></li><li><a href="/test_fluid-web/zh/guide/get_started.html" aria-current="page" class="active sidebar-link">Fluid 快速上手</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/guide/get_started.html#前置需求" class="sidebar-link">前置需求</a></li><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/guide/get_started.html#安装fluid" class="sidebar-link">安装Fluid</a></li><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/guide/get_started.html#创建dataset" class="sidebar-link">创建dataset</a></li></ul></li><li><a href="/test_fluid-web/zh/guide/install.html" class="sidebar-link">在Kubernetes集群上部署Fluid</a></li><li><a href="/test_fluid-web/zh/guide/troubleshooting.html" class="sidebar-link">Fluid问题诊断</a></li><li><a href="/test_fluid-web/zh/guide/faq.html" class="sidebar-link">常见问题</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="fluid-快速上手"><a href="#fluid-快速上手" class="header-anchor">#</a> Fluid 快速上手</h1> <p>本文档介绍了如何创建或使用 Kubernetes 集群环境，通过 Helm 完成 Fluid 安装部署，并使用 Fluid 创建数据集。</p> <h2 id="前置需求"><a href="#前置需求" class="header-anchor">#</a> 前置需求</h2> <ol><li><p>Kubernetes 1.14+</p> <p>如果你目前没有满足条件的 Kubernetes 环境, 那么我们推荐你选择官方认证的 Kubernetes 云服务, 通常情况下, 你仅需寥寥几步即可快速获得一个专属的 Kubernetes 环境, 以下列出了部分经过认证的 Kubernetes 云服务:</p> <ul><li><a href="https://www.aliyun.com/product/kubernetes" target="_blank" rel="noopener noreferrer">阿里云容器服务<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://aws.amazon.com/eks/" target="_blank" rel="noopener noreferrer">Amazon Elastic Kubernetes Service<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://docs.microsoft.com/en-us/azure/aks/tutorial-kubernetes-deploy-cluster" target="_blank" rel="noopener noreferrer">Azure Kubernetes Service<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li> <li><a href="https://cloud.google.com/kubernetes-engine/" target="_blank" rel="noopener noreferrer">Google Kubernetes Engine<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul> <blockquote><p>注意: 考虑到 Minikube 功能的局限性,我们不推荐使用 Minikube 进行接下来的步骤</p></blockquote></li> <li><p>Kubectl 1.14+</p> <p>请确保Kubectl已经正确配置使其能够与你的Kubernetes环境进行交互</p></li> <li><p><a href="https://helm.sh/docs/intro/install/" target="_blank" rel="noopener noreferrer">Helm 3<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <p>在接下来的步骤中, 将使用Helm 3进行 Fluid 的快速安装</p></li></ol> <h2 id="安装fluid"><a href="#安装fluid" class="header-anchor">#</a> 安装Fluid</h2> <ol><li><p>创建命名空间</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl create ns fluid-system
+</code></pre></div></li> <li><p>从 Github 仓库<a href="https://github.com/fluid-cloudnative/fluid/releases" target="_blank" rel="noopener noreferrer">Release页面<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>下载最新版本的Fluid</p></li> <li><p>使用 Helm 安装 Fluid</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ helm <span class="token function">install</span> fluid fluid-<span class="token operator">&lt;</span>version<span class="token operator">&gt;</span>.tgz
+NAME: fluid
+LAST DEPLOYED: Tue Jul  <span class="token number">7</span> <span class="token number">11</span>:22:07 <span class="token number">2020</span>
+NAMESPACE: default
+STATUS: deployed
+REVISION: <span class="token number">1</span>
+TEST SUITE: None
+</code></pre></div></li> <li><p>查看Fluid的运行状态</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl get po -n fluid-system
+NAME                                         READY   STATUS    RESTARTS   AGE
+alluxioruntime-controller-64948b68c9-zzsx2   <span class="token number">1</span>/1     Running   <span class="token number">0</span>          108s
+csi-nodeplugin-fluid-2mfcr                   <span class="token number">2</span>/2     Running   <span class="token number">0</span>          108s
+csi-nodeplugin-fluid-l7lv6                   <span class="token number">2</span>/2     Running   <span class="token number">0</span>          108s
+dataset-controller-5465c4bbf9-5ds5p          <span class="token number">1</span>/1     Running   <span class="token number">0</span>          108s
+</code></pre></div></li></ol> <h2 id="创建dataset"><a href="#创建dataset" class="header-anchor">#</a> 创建dataset</h2> <p>Fluid提供了云原生的数据加速和管理能力，并抽象出了<code>数据集(Dataset)</code>概念方便用户管理，接下来将演示如何用 Fluid 创建一个数据集。</p> <ol><li><p>创建一个Dataset CRD对象，其中描述了数据集的来源。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ cat<span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">&gt;</span>dataset.yaml</span>
+apiVersion: data.fluid.io/v1alpha1
+kind: Dataset
+metadata:
+  name: demo
+spec:
+  mounts:
+    - mountPoint: https://mirrors.bit.edu.cn/apache/spark/
+      name: spark
+EOF</span>
+</code></pre></div><p>执行安装</p> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl create -f dataset.yaml
+</code></pre></div></li> <li><p>创建 <code>AlluxioRuntime</code> CRD对象，用来描述支持这个数据集的 Runtime, 在这里我们使用<a href="https://www.alluxio.io/" target="_blank" rel="noopener noreferrer">Alluxio<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>作为其Runtime</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>$ cat&lt;&lt;EOF <span class="token punctuation">&gt;</span>runtime.yaml
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> data.fluid.io/v1alpha1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> AlluxioRuntime
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> demo
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token key atrule">tieredstore</span><span class="token punctuation">:</span>
+    <span class="token key atrule">levels</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">mediumtype</span><span class="token punctuation">:</span> MEM
+        <span class="token key atrule">path</span><span class="token punctuation">:</span> /dev/shm
+        <span class="token key atrule">quota</span><span class="token punctuation">:</span> 2Gi
+        <span class="token key atrule">high</span><span class="token punctuation">:</span> <span class="token string">&quot;0.95&quot;</span>
+        <span class="token key atrule">low</span><span class="token punctuation">:</span> <span class="token string">&quot;0.7&quot;</span>
+EOF
+</code></pre></div><p>使用<code>kubectl</code>完成创建</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl create -f runtime.yaml  
+</code></pre></div></li> <li><p>接下来，我们创建一个应用容器来使用该数据集，我们将多次访问同一数据，并比较访问时间来展示 Fluid 的加速效果。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ cat<span class="token operator">&lt;&lt;</span><span class="token string">EOF<span class="token bash punctuation"> <span class="token operator">&gt;</span>app.yaml</span>
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-app
+spec:
+  containers:
+    - name: demo
+      image: nginx
+      volumeMounts:
+        - mountPath: /data
+          name: demo
+  volumes:
+    - name: demo
+      persistentVolumeClaim:
+        claimName: demo
+EOF</span>
+</code></pre></div><p>使用<code>kubectl</code>完成创建</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl create -f app.yaml  
+</code></pre></div></li> <li><p>登录到应用容器中访问数据，初次访问会花费更长时间。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl <span class="token builtin class-name">exec</span> -it demo-app -- <span class="token function">bash</span>
+$ <span class="token function">du</span> -sh /data/spark/spark-3.0.1/spark-3.0.1-bin-without-hadoop.tgz
+150M	/data/spark/spark-3.0.1/spark-3.0.1-bin-without-hadoop.tgz
+$ <span class="token function">time</span> <span class="token function">cp</span> /data/spark/spark-3.0.1/spark-3.0.1-bin-without-hadoop.tgz /dev/null
+real	0m13.171s
+user	0m0.002s
+sys	0m0.028s
+</code></pre></div></li> <li><p>为了避免其他因素(比如 page cache )对结果造成影响，我们将删除之前的容器，新建相同的应用，尝试访问同样的文件。由于此时文件已经被 <code>Alluxio</code> 缓存，可以看到第二次访问所需时间远小于第一次。</p> <div class="language-shell extra-class"><pre class="language-shell"><code>$ kubectl delete -f app.yaml <span class="token operator">&amp;&amp;</span> kubectl create -f app.yaml
+$ kubectl <span class="token builtin class-name">exec</span> -it demo-app -- <span class="token function">bash</span>
+$ <span class="token function">time</span> <span class="token function">cp</span> /data/spark/spark-3.0.1/spark-3.0.1-bin-without-hadoop.tgz /dev/null
+real	0m0.034s
+user	0m0.001s
+sys	0m0.032s
+</code></pre></div></li></ol> <p>到这里，我们简单地创建了一个数据集并实现了数据集的抽象管理与加速, 更多有关 Fluid 的更详细的信息, 请参考以下示例文档:</p> <ul><li><a href="/test_fluid-web/zh/samples/">远程文件访问加速</a></li> <li><a href="/test_fluid-web/zh/samples/data_co_locality.html">数据缓存亲和性调度</a></li> <li><a href="/test_fluid-web/zh/samples/machinelearning.html">用Fluid加速机器学习训练</a></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/test_fluid-web/zh/guide/" class="prev router-link-active">
+        Fluid概览
+      </a></span> <span class="next"><a href="/test_fluid-web/zh/guide/install.html">
+        在Kubernetes集群上部署Fluid
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/test_fluid-web/assets/js/app.388e2c4c.js" defer></script><script src="/test_fluid-web/assets/js/2.5766231d.js" defer></script><script src="/test_fluid-web/assets/js/66.86034275.js" defer></script>
+  </body>
+</html>

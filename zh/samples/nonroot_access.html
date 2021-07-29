@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-ch">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>示例 - 使用Fluid访问非root用户的数据 | Fluid</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    <link rel="icon" href="/test_fluid-web/fluid-stacked-color.svg">
+    <meta name="description" content="Fluid, 在云上为大数据以及AI应用的弹性数据提供抽象和加速服务。">
+    
+    <link rel="preload" href="/test_fluid-web/assets/css/0.styles.7dd94690.css" as="style"><link rel="preload" href="/test_fluid-web/assets/js/app.388e2c4c.js" as="script"><link rel="preload" href="/test_fluid-web/assets/js/2.5766231d.js" as="script"><link rel="preload" href="/test_fluid-web/assets/js/89.bfdc775b.js" as="script"><link rel="prefetch" href="/test_fluid-web/assets/js/10.a47f132f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/11.1b4f7b93.js"><link rel="prefetch" href="/test_fluid-web/assets/js/12.c4b61c02.js"><link rel="prefetch" href="/test_fluid-web/assets/js/13.e06d011d.js"><link rel="prefetch" href="/test_fluid-web/assets/js/14.6cc73322.js"><link rel="prefetch" href="/test_fluid-web/assets/js/15.a90eda0d.js"><link rel="prefetch" href="/test_fluid-web/assets/js/16.66ba02df.js"><link rel="prefetch" href="/test_fluid-web/assets/js/17.48dd3685.js"><link rel="prefetch" href="/test_fluid-web/assets/js/18.63421545.js"><link rel="prefetch" href="/test_fluid-web/assets/js/19.d9e59557.js"><link rel="prefetch" href="/test_fluid-web/assets/js/20.f4593b97.js"><link rel="prefetch" href="/test_fluid-web/assets/js/21.92b11002.js"><link rel="prefetch" href="/test_fluid-web/assets/js/22.f9c9101f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/23.8399d520.js"><link rel="prefetch" href="/test_fluid-web/assets/js/24.59a70a2a.js"><link rel="prefetch" href="/test_fluid-web/assets/js/25.bf1beed1.js"><link rel="prefetch" href="/test_fluid-web/assets/js/26.a16f0755.js"><link rel="prefetch" href="/test_fluid-web/assets/js/27.15ccff10.js"><link rel="prefetch" href="/test_fluid-web/assets/js/28.9889b39f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/29.1215e799.js"><link rel="prefetch" href="/test_fluid-web/assets/js/3.56d689c1.js"><link rel="prefetch" href="/test_fluid-web/assets/js/30.2bb34711.js"><link rel="prefetch" href="/test_fluid-web/assets/js/31.de305f87.js"><link rel="prefetch" href="/test_fluid-web/assets/js/32.419f8133.js"><link rel="prefetch" href="/test_fluid-web/assets/js/33.c43f24fc.js"><link rel="prefetch" href="/test_fluid-web/assets/js/34.90bf1b16.js"><link rel="prefetch" href="/test_fluid-web/assets/js/35.0f51ee57.js"><link rel="prefetch" href="/test_fluid-web/assets/js/36.96508203.js"><link rel="prefetch" href="/test_fluid-web/assets/js/37.ae6696ba.js"><link rel="prefetch" href="/test_fluid-web/assets/js/38.28aa4b9f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/39.f1ca8a61.js"><link rel="prefetch" href="/test_fluid-web/assets/js/4.d02a3f46.js"><link rel="prefetch" href="/test_fluid-web/assets/js/40.2011ae55.js"><link rel="prefetch" href="/test_fluid-web/assets/js/41.9fe8f146.js"><link rel="prefetch" href="/test_fluid-web/assets/js/42.8c89f576.js"><link rel="prefetch" href="/test_fluid-web/assets/js/43.e36c35e3.js"><link rel="prefetch" href="/test_fluid-web/assets/js/44.a4a526e3.js"><link rel="prefetch" href="/test_fluid-web/assets/js/45.32c04bd0.js"><link rel="prefetch" href="/test_fluid-web/assets/js/46.5db1961b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/47.592ddd13.js"><link rel="prefetch" href="/test_fluid-web/assets/js/48.b9de6e43.js"><link rel="prefetch" href="/test_fluid-web/assets/js/49.f563b5fc.js"><link rel="prefetch" href="/test_fluid-web/assets/js/5.f46eaad6.js"><link rel="prefetch" href="/test_fluid-web/assets/js/50.5e0b8751.js"><link rel="prefetch" href="/test_fluid-web/assets/js/51.e3af9de5.js"><link rel="prefetch" href="/test_fluid-web/assets/js/52.df87ffac.js"><link rel="prefetch" href="/test_fluid-web/assets/js/53.f0ad16f5.js"><link rel="prefetch" href="/test_fluid-web/assets/js/54.64193864.js"><link rel="prefetch" href="/test_fluid-web/assets/js/55.0f7edaff.js"><link rel="prefetch" href="/test_fluid-web/assets/js/56.fa85df5a.js"><link rel="prefetch" href="/test_fluid-web/assets/js/57.e559add7.js"><link rel="prefetch" href="/test_fluid-web/assets/js/58.c2deb6eb.js"><link rel="prefetch" href="/test_fluid-web/assets/js/59.92e500c2.js"><link rel="prefetch" href="/test_fluid-web/assets/js/6.c1eeb950.js"><link rel="prefetch" href="/test_fluid-web/assets/js/60.da86a163.js"><link rel="prefetch" href="/test_fluid-web/assets/js/61.cc0e1096.js"><link rel="prefetch" href="/test_fluid-web/assets/js/62.bc797710.js"><link rel="prefetch" href="/test_fluid-web/assets/js/63.4be107bc.js"><link rel="prefetch" href="/test_fluid-web/assets/js/64.03592719.js"><link rel="prefetch" href="/test_fluid-web/assets/js/65.147730bd.js"><link rel="prefetch" href="/test_fluid-web/assets/js/66.86034275.js"><link rel="prefetch" href="/test_fluid-web/assets/js/67.5deeff6f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/68.c2a5158b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/69.aa46e80c.js"><link rel="prefetch" href="/test_fluid-web/assets/js/7.26529ff9.js"><link rel="prefetch" href="/test_fluid-web/assets/js/70.627b3f91.js"><link rel="prefetch" href="/test_fluid-web/assets/js/71.decc0dba.js"><link rel="prefetch" href="/test_fluid-web/assets/js/72.4e973f11.js"><link rel="prefetch" href="/test_fluid-web/assets/js/73.d8016a18.js"><link rel="prefetch" href="/test_fluid-web/assets/js/74.35635e47.js"><link rel="prefetch" href="/test_fluid-web/assets/js/75.4afdac49.js"><link rel="prefetch" href="/test_fluid-web/assets/js/76.281abbaa.js"><link rel="prefetch" href="/test_fluid-web/assets/js/77.9e26ce90.js"><link rel="prefetch" href="/test_fluid-web/assets/js/78.1df84513.js"><link rel="prefetch" href="/test_fluid-web/assets/js/79.2fd13a47.js"><link rel="prefetch" href="/test_fluid-web/assets/js/8.f1d5ca74.js"><link rel="prefetch" href="/test_fluid-web/assets/js/80.b85b01c0.js"><link rel="prefetch" href="/test_fluid-web/assets/js/81.33165f64.js"><link rel="prefetch" href="/test_fluid-web/assets/js/82.604dce1f.js"><link rel="prefetch" href="/test_fluid-web/assets/js/83.b7dc0551.js"><link rel="prefetch" href="/test_fluid-web/assets/js/84.56815f63.js"><link rel="prefetch" href="/test_fluid-web/assets/js/85.5bd120e4.js"><link rel="prefetch" href="/test_fluid-web/assets/js/86.afed304a.js"><link rel="prefetch" href="/test_fluid-web/assets/js/87.b761b891.js"><link rel="prefetch" href="/test_fluid-web/assets/js/88.53aab7ed.js"><link rel="prefetch" href="/test_fluid-web/assets/js/9.10583e0b.js"><link rel="prefetch" href="/test_fluid-web/assets/js/90.f8a54968.js"><link rel="prefetch" href="/test_fluid-web/assets/js/91.77fe31dd.js">
+    <link rel="stylesheet" href="/test_fluid-web/assets/css/0.styles.7dd94690.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/test_fluid-web/zh/" class="home-link router-link-active"><img src="/test_fluid-web/fluid-horizontal-color.png" alt="Fluid" class="logo"></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/guide/" class="nav-link">
+  指南
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/dev/" class="nav-link">
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/" class="nav-link router-link-active">
+  示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="社区" class="dropdown-title"><span class="title">社区</span> <span class="arrow down"></span></button> <button type="button" aria-label="社区" class="mobile-dropdown-title"><span class="title">社区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/community.html" class="nav-link">
+  社区
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/ADOPTERS.html" class="nav-link">
+  合作伙伴
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/technology/" class="nav-link">
+  技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/releases/" class="nav-link">
+  版本发布
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/casestudy/" class="nav-link">
+  案例学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/samples/nonroot_access.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/nonroot_access.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/fluid-cloudnative/fluid" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow down"></span></button> <button type="button" aria-label="文档" class="mobile-dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/guide/" class="nav-link">
+  指南
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/dev/" class="nav-link">
+  开发
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/" class="nav-link router-link-active">
+  示例
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="社区" class="dropdown-title"><span class="title">社区</span> <span class="arrow down"></span></button> <button type="button" aria-label="社区" class="mobile-dropdown-title"><span class="title">社区</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/community.html" class="nav-link">
+  社区
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/community/ADOPTERS.html" class="nav-link">
+  合作伙伴
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/technology/" class="nav-link">
+  技术内幕
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/releases/" class="nav-link">
+  版本发布
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/blog/casestudy/" class="nav-link">
+  案例学习
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/test_fluid-web/samples/nonroot_access.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/test_fluid-web/zh/samples/nonroot_access.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/fluid-cloudnative/fluid" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/test_fluid-web/zh/samples/" aria-current="page" class="sidebar-link">示例 - 远程Web文件访问加速</a></li><li><a href="/test_fluid-web/zh/samples/accelerate_pvc.html" class="sidebar-link">示例 - 使用Fluid加速PVC</a></li><li><a href="/test_fluid-web/zh/samples/machinelearning.html" class="sidebar-link">示例 - 用Fluid加速机器学习训练</a></li><li><a href="/test_fluid-web/zh/samples/data_warmup.html" class="sidebar-link">示例 - 数据预加载</a></li><li><a href="/test_fluid-web/zh/samples/accelerate_hdfs.html" class="sidebar-link">示例 - HDFS Client文件访问加速</a></li><li><a href="/test_fluid-web/zh/samples/api_proxy.html" class="sidebar-link">示例 - 基于Restful的文件系统客户端</a></li><li><a href="/test_fluid-web/zh/samples/backup_and_restore_metadata.html" class="sidebar-link">示例-Dataset数据的的备份与恢复</a></li><li><a href="/test_fluid-web/zh/samples/data_co_locality.html" class="sidebar-link">示例 - 数据缓存亲和性调度</a></li><li><a href="/test_fluid-web/zh/samples/data_toleration.html" class="sidebar-link">示例 - 数据容忍污点调度</a></li><li><a href="/test_fluid-web/zh/samples/dataset_scaling.html" class="sidebar-link">示例 - Dataset手动扩缩容</a></li><li><a href="/test_fluid-web/zh/samples/fuse_affinity.html" class="sidebar-link">示例 - Fuse客户端全局部署</a></li><li><a href="/test_fluid-web/zh/samples/hdfs_configuration.html" class="sidebar-link">示例 - Fluid访问HDFS所需的特殊配置</a></li><li><a href="/test_fluid-web/zh/samples/hostpath.html" class="sidebar-link">示例 - 使用Fluid加速主机目录</a></li><li><a href="/test_fluid-web/zh/samples/master_high_avaliability.html" class="sidebar-link">示例 - 配置 master 高可用模式</a></li><li><a href="/test_fluid-web/zh/samples/multi_dataset_same_node_accessing.html" class="sidebar-link">示例 - 单机多Dataset远程Web文件访问加速</a></li><li><a href="/test_fluid-web/zh/samples/nonroot_access.html" aria-current="page" class="active sidebar-link">示例 - 使用Fluid访问非root用户的数据</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/samples/nonroot_access.html#前提条件" class="sidebar-link">前提条件</a></li><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/samples/nonroot_access.html#运行示例" class="sidebar-link">运行示例</a></li><li class="sidebar-sub-header"><a href="/test_fluid-web/zh/samples/nonroot_access.html#环境清理" class="sidebar-link">环境清理</a></li></ul></li><li><a href="/test_fluid-web/zh/samples/tieredstore_config.html" class="sidebar-link">示例 - Alluxio分层存储配置</a></li><li><a href="/test_fluid-web/zh/samples/use_encryptoptions.html" class="sidebar-link">示例 - 使用Secret配置Dataset敏感信息</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="示例-使用fluid访问非root用户的数据"><a href="#示例-使用fluid访问非root用户的数据" class="header-anchor">#</a> 示例 - 使用Fluid访问非root用户的数据</h1> <p>如果用户的数据只能以特定uid访问时，需要通过设置Runtime的RunAs参数指定特定用户运行分布式数据缓存引擎以访问底层数据。</p> <p>本文档将通过一个简单的例子演示上述特性</p> <h2 id="前提条件"><a href="#前提条件" class="header-anchor">#</a> 前提条件</h2> <ul><li><a href="https://github.com/fluid-cloudnative/fluid" target="_blank" rel="noopener noreferrer">Fluid<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>(version &gt;= 0.3.0)</li></ul> <p>请参考<a href="https://github.com/fluid-cloudnative/fluid/blob/master/docs/zh/userguide/install.md" target="_blank" rel="noopener noreferrer">Fluid安装文档<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>完成安装</p> <h2 id="运行示例"><a href="#运行示例" class="header-anchor">#</a> 运行示例</h2> <p><strong>创建一个非root用户</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$ groupadd -g 1201 fluid-user-1 &amp;&amp; \
+useradd -u 1201 -g fluid-user-1 fluid-user-1
+</code></pre></div><p>上述命令创建了一个非root用户<code>fluid-user-1</code></p> <p><strong>创建属于该用户的目录</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$ mkdir -p /mnt/nonroot/user1_data &amp;&amp; \
+echo &quot;This is fluid-user-1's data&quot; &gt; /mnt/nonroot/user1_data/data1 &amp;&amp; \
+chown -R fluid-user-1:fluid-user-1 /mnt/nonroot/user1_data &amp;&amp; \
+chmod -R 0750 /mnt/nonroot/user1_data
+</code></pre></div><p>上述命令在<code>/mnt/nonroot</code>目录下创建了属于<code>fluid-user-1</code>的目录<code>user1_data</code>, 我们将以<code>user1_data</code>目录下的<code>data1</code>文件来模拟专属于<code>fluid-user-1</code>的数据</p> <div class="language- extra-class"><pre class="language-text"><code>$ ls -ltR /mnt/nonroot
+</code></pre></div><p>使用上述命令，你将看到以下结果：</p> <div class="language- extra-class"><pre class="language-text"><code>/mnt/nonroot/:
+total 4
+drwxr-x--- 2 fluid-user-1 fluid-user-1 4096 9月  27 16:45 user1_data
+
+/mnt/nonroot/user1_data:
+total 4
+-rwxr-x--- 1 fluid-user-1 fluid-user-1 28 9月  27 16:45 data1
+</code></pre></div><p><strong>创建Dataset和AlluxioRuntime资源对象</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>$ cat&lt;&lt;EOF <span class="token punctuation">&gt;</span>dataset.yaml
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> data.fluid.io/v1alpha1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Dataset
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> nonroot
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">mounts</span><span class="token punctuation">:</span>
+    <span class="token comment"># 指定刚才建立的目录作为挂载位置</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">mountPoint</span><span class="token punctuation">:</span> local<span class="token punctuation">:</span>///mnt/nonroot/
+      <span class="token key atrule">name</span><span class="token punctuation">:</span> nonroot
+  <span class="token comment"># 确保数据缓存被放置在存在/mnt/nonroot目录的结点上</span>
+  <span class="token key atrule">nodeAffinity</span><span class="token punctuation">:</span>
+    <span class="token key atrule">required</span><span class="token punctuation">:</span>
+      <span class="token key atrule">nodeSelectorTerms</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">matchExpressions</span><span class="token punctuation">:</span>
+            <span class="token punctuation">-</span> <span class="token key atrule">key</span><span class="token punctuation">:</span> nonroot
+              <span class="token key atrule">operator</span><span class="token punctuation">:</span> In
+              <span class="token key atrule">values</span><span class="token punctuation">:</span>
+                <span class="token punctuation">-</span> <span class="token string">&quot;true&quot;</span>
+<span class="token punctuation">---</span>
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> data.fluid.io/v1alpha1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> AlluxioRuntime
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> nonroot
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+  <span class="token key atrule">tieredstore</span><span class="token punctuation">:</span>
+    <span class="token key atrule">levels</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">mediumtype</span><span class="token punctuation">:</span> SSD
+        <span class="token key atrule">path</span><span class="token punctuation">:</span> /var/lib/docker/alluxio
+        <span class="token key atrule">quota</span><span class="token punctuation">:</span> 2Gi
+        <span class="token key atrule">high</span><span class="token punctuation">:</span> <span class="token string">&quot;0.95&quot;</span>
+        <span class="token key atrule">low</span><span class="token punctuation">:</span> <span class="token string">&quot;0.7&quot;</span>
+  <span class="token comment"># 以fluid-user-1的用户身份启动Alluxio</span>
+  <span class="token key atrule">runAs</span><span class="token punctuation">:</span>
+    <span class="token key atrule">uid</span><span class="token punctuation">:</span> <span class="token number">1201</span>
+    <span class="token key atrule">gid</span><span class="token punctuation">:</span> <span class="token number">1201</span>
+    <span class="token key atrule">user</span><span class="token punctuation">:</span> fluid<span class="token punctuation">-</span>user<span class="token punctuation">-</span><span class="token number">1</span>
+    <span class="token key atrule">group</span><span class="token punctuation">:</span> fluid<span class="token punctuation">-</span>user<span class="token punctuation">-</span><span class="token number">1</span>
+  <span class="token key atrule">fuse</span><span class="token punctuation">:</span>
+    <span class="token key atrule">args</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> fuse
+    <span class="token punctuation">-</span> <span class="token punctuation">-</span><span class="token punctuation">-</span>fuse<span class="token punctuation">-</span>opts=kernel_cache<span class="token punctuation">,</span>ro<span class="token punctuation">,</span>max_read=131072<span class="token punctuation">,</span>attr_timeout=7200<span class="token punctuation">,</span>entry_timeout=7200<span class="token punctuation">,</span>max_readahead=0
+EOF
+</code></pre></div><p>在上述yaml配置文件中，我们将以挂载主机目录的方式挂载我们刚才创建的目录(<code>/mnt/nonroot</code>)，更多有关Fluid挂载主机目录的信息，请参考<a href="/test_fluid-web/zh/samples/hostpath.html">示例 - 用Fluid加速主机目录</a></p> <p>另外，在<code>spec.runAs</code>中我们设置了<code>uid</code>等用户信息，这意味着我们将以<code>fluid-user-1</code>的用户身份启动缓存引擎，提供分布式缓存能力</p> <p><strong>标记结点</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl label node &lt;node&gt; nonroot=true
+</code></pre></div><p>使用<code>nonroot=true</code>对刚才创建的<code>/mnt/nonroot</code>目录所在结点进行标记，确保缓存引擎在该结点上启动，使得其能够正确挂载指定的主机目录</p> <p><strong>创建Dataset和AlluxioRuntime资源对象</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl create -f dataset.yaml
+</code></pre></div><p><strong>查看PV,PVC</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl get pv,pvc
+</code></pre></div><p>待缓存引擎正常启动后，上述命令将得到如下结果：</p> <div class="language- extra-class"><pre class="language-text"><code>NAME                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM             STORAGECLASS   REASON   AGE
+persistentvolume/nonroot   100Gi      RWX            Retain           Bound    default/nonroot                           3m18s
+
+NAME                            STATUS   VOLUME    CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+persistentvolumeclaim/nonroot   Bound    nonroot   100Gi      RWX                           3m18s
+</code></pre></div><p><strong>创建应用使用Dataset</strong></p> <div class="language-yaml extra-class"><pre class="language-yaml"><code>$ cat&lt;&lt;EOF <span class="token punctuation">&gt;</span>app.yaml
+<span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Pod
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">containers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> nginx
+      <span class="token key atrule">image</span><span class="token punctuation">:</span> nginx
+      <span class="token key atrule">imagePullPolicy</span><span class="token punctuation">:</span> IfNotPresent
+      <span class="token key atrule">volumeMounts</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> <span class="token key atrule">mountPath</span><span class="token punctuation">:</span> /data
+          <span class="token key atrule">name</span><span class="token punctuation">:</span> nonroot<span class="token punctuation">-</span>vol
+      <span class="token key atrule">securityContext</span><span class="token punctuation">:</span>
+        <span class="token key atrule">runAsUser</span><span class="token punctuation">:</span> <span class="token number">1201</span>
+        <span class="token key atrule">runAsGroup</span><span class="token punctuation">:</span> <span class="token number">1201</span>
+      <span class="token key atrule">command</span><span class="token punctuation">:</span>
+        <span class="token punctuation">-</span> tail
+        <span class="token punctuation">-</span> <span class="token punctuation">-</span>f
+        <span class="token punctuation">-</span> /dev/null 
+  <span class="token key atrule">volumes</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> nonroot<span class="token punctuation">-</span>vol
+      <span class="token key atrule">persistentVolumeClaim</span><span class="token punctuation">:</span>
+        <span class="token key atrule">claimName</span><span class="token punctuation">:</span> nonroot
+EOF
+</code></pre></div><p>上述配置意味着我们将以<code>uid</code>为1201的用户身份启动该应用, 并通过Fluid创建出的PVC将数据挂载到Pod上</p> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl create -f app.yaml
+</code></pre></div><p><strong>登录应用</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl exec -it nginx -- bash
+</code></pre></div><div class="language- extra-class"><pre class="language-text"><code>$ id
+</code></pre></div><p>上述命令将得到以下结果：</p> <div class="language- extra-class"><pre class="language-text"><code>uid=1201 gid=1201 groups=1201
+</code></pre></div><p>这表明我们以<code>uid</code>为1201的用户身份启动了该应用</p> <p><strong>访问数据</strong></p> <div class="language- extra-class"><pre class="language-text"><code>$ ls -ltR /data
+</code></pre></div><p>上述命令将得到以下结果：</p> <div class="language- extra-class"><pre class="language-text"><code>/data/:
+total 1
+drwxr-xr-x 1 root root 1 Sep 27 08:45 nonroot
+
+/data/nonroot:
+total 1
+drwxr-x--- 1 1201 1201 1 Sep 27 08:45 user1_data
+
+/data/nonroot/user1_data:
+total 1
+-rwxr-x--- 1 1201 1201 28 Sep 27 08:45 data1
+</code></pre></div><p>可以看到，Fluid能够以<strong>透传</strong>的方式将所属某个非root用户的数据暴露给需要这些数据的应用，用户数据的各文件信息不会发生改变</p> <p>当然，该用户可以自由地访问这些数据：</p> <div class="language- extra-class"><pre class="language-text"><code>$ cat /data/nonroot/user1_data/data1
+</code></pre></div><p>上述命令将得到以下结果：</p> <div class="language- extra-class"><pre class="language-text"><code>This is fluid-user-1's data
+</code></pre></div><h2 id="环境清理"><a href="#环境清理" class="header-anchor">#</a> 环境清理</h2> <div class="language- extra-class"><pre class="language-text"><code>$ kubectl delete -f .
+$ rm -rf /mnt/nonroot
+$ userdel fluid-user-1
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/test_fluid-web/zh/samples/multi_dataset_same_node_accessing.html" class="prev">
+        示例 - 单机多Dataset远程Web文件访问加速
+      </a></span> <span class="next"><a href="/test_fluid-web/zh/samples/tieredstore_config.html">
+        示例 - Alluxio分层存储配置
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/test_fluid-web/assets/js/app.388e2c4c.js" defer></script><script src="/test_fluid-web/assets/js/2.5766231d.js" defer></script><script src="/test_fluid-web/assets/js/89.bfdc775b.js" defer></script>
+  </body>
+</html>
